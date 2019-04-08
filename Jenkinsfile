@@ -31,8 +31,7 @@ stage('Build image') {
 * docker build on the command line */ 
  
  
-app = docker.build("test:lastest") 
-app.tag("hub.docker.hpecorp.net/patrick.gartenbach@hpe.com/e2e-demo")
+app = docker.build("test") 
  
 } 
  
