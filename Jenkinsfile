@@ -19,7 +19,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("cryade/hellonode:{env.BUILD_ID}")
+        app = docker.build("cryade/hellonode:${env.BUILD_ID}")
     }
 
     stage('Test image') {
