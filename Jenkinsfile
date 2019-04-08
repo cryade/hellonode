@@ -32,7 +32,7 @@ stage('Build image') {
  
  
  
-app = docker.build("hellonode") 
+app = docker.build("e2e-demo/hellonode") 
  
 } 
  
