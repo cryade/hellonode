@@ -32,7 +32,7 @@ stage('Building') {
 * docker build on the command line */ 
  
  
-app = docker.build("patrick.gartenbach@hpe.com/e2e-demo:lastest") 
+app = docker.build("patrick.gartenbach%40hpe.com/e2e-demo:lastest") 
  
 } 
  
