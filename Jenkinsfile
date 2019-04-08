@@ -1,5 +1,13 @@
 node {
     def app
+    
+        environment { 
+        HTTPS_PROXY = 'http://16.85.88.60:8080'
+        HTTP_PROXY  = 'http://16.85.88.60:8080'
+      
+        PROXY_ENABLED = 'TRUE'
+        CI = 'true'
+    }
 
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
