@@ -13,7 +13,7 @@ environment {
         CI = 'true' 
     } 
  
-stage('Clone repository') { 
+stage('Checkout') { 
  
 /* Let's make sure we have the repository cloned to our workspace */ 
  
@@ -25,7 +25,7 @@ checkout scm
  
  
  
-stage('Build image') { 
+stage('Building') { 
  
 /* This builds the actual image; synonymous to 
  
@@ -38,7 +38,7 @@ app = docker.build("gaba5/test")
  
  
  
-stage('Test image') { 
+stage('Testing') { 
  
 /* Ideally, we would run a test framework against our image. 
  
@@ -56,7 +56,7 @@ sh 'echo "Tests passed"'
  
  
  
-stage('Push image') { 
+stage('Pushing') { 
  
 /* Finally, we'll push the image with two tags: 
  
@@ -75,6 +75,9 @@ app.push("latest")
 } 
  
 } 
+ stage('Delivering')
+ {
+ }
  
 } 
 
