@@ -40,4 +40,4 @@ node {
             app.push('/repositories/patrick.gartenbach@hpe.com/e2e-demo')
         }
     }
-}
+
