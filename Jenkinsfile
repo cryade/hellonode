@@ -32,6 +32,7 @@ pipeline {
             }
 
             stage('Push image') {
+                steps{
                 /* Finally, we'll push the image with two tags:
                  * First, the incremental build number from Jenkins
                  * Second, the 'latest' tag.
@@ -40,6 +41,7 @@ pipeline {
                     app.push()
                 }
                 }
+            }
         }
     }
 }
