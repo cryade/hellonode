@@ -19,7 +19,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = docker.build("hellonode:${env.BUILD_ID}")
+        app = docker.build("repositories/patrick.gartenbach@hpe.com/e2e-demo/hellonode:${env.BUILD_ID}")
     }
 
     stage('Test image') {
