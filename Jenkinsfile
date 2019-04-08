@@ -32,7 +32,7 @@ stage('Build image') {
  
  
  
-app = docker.build("e2e-demo/hellonode") 
+app = docker.build("hub.docker.hpecorp.net/patrick.gartenbach@hpe.com/e2e-demo") 
  
 } 
  
