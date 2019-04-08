@@ -7,6 +7,7 @@ def app
 environment {  
         HTTPS_PROXY = 'http://16.85.88.60:8080' 
         HTTP_PROXY  = 'http://16.85.88.60:8080' 
+        NO_PROXY 	  = 'http://127.0.0.1:8080'
        
         PROXY_ENABLED = 'TRUE' 
         CI = 'true' 
