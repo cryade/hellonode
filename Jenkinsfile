@@ -1,6 +1,4 @@
-pipeline {
-    
-    node{
+node{
         def app
     environment { 
         HTTPS_PROXY = 'http://16.85.88.60:8080'
@@ -44,4 +42,4 @@ pipeline {
             }
         }
     }
-}
+
