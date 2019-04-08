@@ -32,7 +32,7 @@ stage('Building') {
 * docker build on the command line */ 
  
  
-app = docker.build("gaba5/test") 
+app = docker.build("patrick.gartenbach@hpe.com/e2e-demo:lastest") 
  
 } 
  
@@ -66,7 +66,8 @@ stage('Pushing') {
  
 * Pushing multiple tags is cheap, as all the layers are reused. */ 
  
-docker.withRegistry('https://registry.hub.docker.com', 'dockerhubP'){ 
+/* docker.withRegistry('https://registry.hub.docker.com', 'dockerhubP'){ */
+ docker.withRegistry('https://hub.docker.hpecorp.net', 'dockerhub'){ 
  
 app.push("${env.BUILD_NUMBER}") 
  
