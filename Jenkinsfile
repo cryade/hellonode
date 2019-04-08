@@ -66,7 +66,7 @@ stage('Push image') {
  
 * Pushing multiple tags is cheap, as all the layers are reused. */ 
  
- docker.withRegistry('https://hub.docker.hpecorp.net/repositories/patrick.gartenbach@hpe.com/e2e-demo/', 'dockerhub'){ 
+ docker.withRegistry([ credentialsId: "dockerhub", url:"https://hub.docker.hpecorp.net/repositories/patrick.gartenbach@hpe.com/e2e-demo/"]){ 
  
  
 app.push("${env.BUILD_NUMBER}") 
