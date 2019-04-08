@@ -36,9 +36,8 @@ node {
          * First, the incremental build number from Jenkins
          * Second, the 'latest' tag.
          * Pushing multiple tags is cheap, as all the layers are reused. */
-        docker.withRegistry('https://hub.docker.hpecorp.net/repositories/patrick.gartenbach@hpe.com/e2e-demo', 'dockerhub') {
-            app.push()
-            app.push()
+        docker.withRegistry('https://hub.docker.hpecorp.net/repositories/patrick.gartenbach@hpe.com/e2e-demo', 'dockerhub')
+            app.push('/repositories/patrick.gartenbach@hpe.com/e2e-demo')
         }
     }
 }
