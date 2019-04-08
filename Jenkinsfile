@@ -32,7 +32,7 @@ stage('Build image') {
  
  
  
-app = docker.build("repositories/patrick.gartenbach@hpe.com/e2e-demo/hellonode") 
+app = docker.build("hellonode") 
  
 } 
  
@@ -66,7 +66,7 @@ stage('Push image') {
  
 * Pushing multiple tags is cheap, as all the layers are reused. */ 
  
-                docker.withRegistry('https://hub.docker.hpecorp.net/', 'dockerhub'){ 
+ docker.withRegistry("https://${hub.docker.hpecorp.net/repositories/patrick.gartenbach@hpe.com/e2e-demo/}", '${dockerhub}'){ 
  
  
 app.push("${env.BUILD_NUMBER}") 
