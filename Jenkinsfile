@@ -32,7 +32,7 @@ stage('Build image') {
  
  
  
-app = docker.build(test") 
+app = docker.build("test") 
 app.tag("hub.docker.hpecorp.net/patrick.gartenbach@hpe.com/e2e-demo")
  
 } 
